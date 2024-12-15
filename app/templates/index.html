@@ -1,0 +1,122 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}AgroSmart{% endblock %}
+
+{% block content %}
+<!-- Jumbotron Section Begin -->
+<div class="jumbotron d-flex">
+  <div class="container my-auto">
+    <div class="row" style="overflow: hidden;">
+      <div class="col-lg-12" data-aos="fade-up" data-aos-duration="2000">
+        <div class="jumbotron-content text-white">
+          <h2 class="fw-bold fs-2">AgroSmart: Solusi komprehensif untuk pertanian modern</h2>
+          <p class="mb-0">Gunakan AgroSmart untuk mengetahui rekomendasi tanaman pertanian yang sesuai guna mencapai pemanfaatan hasil lahan yang optimal.</p>
+          <a href="{{ url_for('crop_recommendation') }}" class="btn btn-success mt-3 ">Mulai Rekomendasi!</a> <!-- Button to redirect to another page -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron End -->
+
+
+<!-- Services Section Begin -->
+<div class="services" id="services">
+  <div class="container">     
+      <div class="sevices-info bg-white p-4 rounded shadow">
+        <h4 class="fw-bold fs-5 mb-3 text-black">AgroSmart: Layanan Rekomendasi Tanaman</h4>
+        <p class="mb-3">
+          AgroSmart adalah sebuah sistem berbasis model pembelajaran mesin yang membantu pengguna menemukan tanaman terbaik untuk ditanam di lahan mereka. Model ini mengolah data faktor lingkungan seperti Nitrogen, Fosfor, Kalium, suhu, kelembaban, pH, dan curah hujan untuk memberikan rekomendasi yang paling sesuai.
+        </p>
+        <p class="mb-3">
+          Proses dimulai dengan pengguna memasukkan data lingkungan terkait ke dalam sistem. Data tersebut akan diproses melalui langkah-langkah pre-processing seperti pengkodean label, normalisasi data, dan pembagian dataset menjadi data pelatihan dan pengujian. Model kemudian dilatih menggunakan arsitektur Neural network dengan lapisan Dense yang dioptimalkan untuk klasifikasi multi-kelas.
+        </p>
+        <div>
+          <p class="fw-bold mb-3 text-dark">Cara Kerja di AgroSmart:</p>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-secondary">
+              <strong>Masukkan Data:</strong> Gunakan formulir untuk mengisi data lingkungan Anda, termasuk kandungan nutrisi tanah, parameter iklim, dan karakteristik pH.
+            </li>
+            <li class="mb-2 text-secondary">
+              <strong>Klik Cari Rekomendasi:</strong> Sistem secara otomatis memproses data melalui model machine learning yang telah terlatih.
+            </li>
+            <li class="mb-0 text-secondary">
+              <strong>Dapatkan Rekomendasi Tanaman:</strong> Hasilnya adalah tanaman paling cocok untuk kondisi tanah dan lingkungan Anda.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Services End -->
+
+<div class="about" id="about">
+  <div class="container py-5">
+    <div class="row mb-5">
+      <div class="col-lg-12 text-center">
+        <h3 class="fw-bold fs-3 text-primary text-white">Tentang Kami</h3>
+        <p class="text-white">Kenali lebih dekat dengan kami</p>
+      </div>
+    </div>
+     
+    <div class="row align-items-stretch">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="about-kelompok bg-light p-4 rounded shadow h-30">
+          <h4 class="fw-bold fs-5 mb-3 text-secondary">Anggota Kelompok</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2 d-flex align-items-center">
+              <i class="bi bi-person-circle text-primary me-2"></i>
+              <div>
+                <div class="fw-medium">Fairna Mustika Hermafidhanti <span class="small text-muted">5025221160</span></div>
+              </div>
+            </li>
+            <li class="mb-2 d-flex align-items-center">
+              <i class="bi bi-person-circle text-primary me-2"></i>
+              <div>
+                <div class="fw-medium">Athaya Rohadatul Yaqutah <span class="small text-muted">5025221235</span></div>
+              </div>
+            </li>
+            <li class="mb-2 d-flex align-items-center">
+              <i class="bi bi-person-circle text-primary me-2"></i>
+              <div>
+                <div class="fw-medium">Richo Yudha Kurniawan <span class="small text-muted">5025221242</span></div>
+              </div>
+            </li>
+            <li class="mb-2 d-flex align-items-center">
+              <i class="bi bi-person-circle text-primary me-2"></i>
+              <div>
+                <div class="fw-medium">Aulia Putri Salsabila <span class="small text-muted">5025221281</span></div>
+              </div>
+            </li>
+            <li class="mb-2 d-flex align-items-center">
+              <i class="bi bi-person-circle text-primary me-2"></i>
+              <div>
+                <div class="fw-medium">Nisrina Salma Robbani <span class="small text-muted">5025221290</span></div>
+              </div>
+            </li>
+            <li class="mb-2 d-flex align-items-center">
+              <i class="bi bi-person-circle text-primary me-2"></i>
+              <div class="fw-bold">Rekayasa Sistem Berbasis Pengetahuan - D</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="h-30">
+          <img src="../static/img/tanaman.png" alt="Petani menganalisis tanahnya" style="object-fit: cover; height: 290px; width: 100%;">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script>
+  AOS.init({
+    once: true
+  });
+</script>
+{% endblock %}
