@@ -2,11 +2,11 @@ import requests
 import numpy as np
 from flask import json
 from app import config
-import pickle
+import joblib
 
 # Load crop recommendation model
 with open('app/data/models/Best_RDF_model.pkl', 'rb') as file:
-    crop_recommendation = pickle.load(file)
+    crop_recommendation = joblib.load(file)
 
 # Cast numeric label back to wordish prediction
 def recommendation_label(prediction):

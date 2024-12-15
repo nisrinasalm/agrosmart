@@ -2,10 +2,10 @@
 import numpy as np
 import json
 import os
-import pickle
+import joblib
 
 def load_model_pkl():
-  model = pickle.load('models/Best_RDF_model.pkl')
+  model = joblib.load('models/Best_RDF_model.pkl')
   return model
 
 # Function to cast numeric label back to wordish prediction
