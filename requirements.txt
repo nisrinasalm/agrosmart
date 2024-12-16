@@ -1,6 +1,6 @@
 Flask
 MarkupSafe
 numpy
-joblib
 requests
 scikit-learn
+tensorflow

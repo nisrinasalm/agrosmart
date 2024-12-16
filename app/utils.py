@@ -2,11 +2,10 @@ import requests
 import numpy as np
 from flask import json
 from app import config
-import joblib
+from keras.models import load_model
 
 # Load crop recommendation model
-with open('app/data/models/Best_RDF_model.pkl', 'rb') as file:
-    crop_recommendation = joblib.load(file)
+crop_recommendation = load_model('app/data/models/weights.193-0.042.keras')
 
 # Cast numeric label back to wordish prediction
 def recommendation_label(prediction):

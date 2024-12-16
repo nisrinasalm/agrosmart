@@ -2,10 +2,10 @@
 import numpy as np
 import json
 import os
-import joblib
+import tensorflow as tf
 
-def load_model_pkl():
-  model = joblib.load('models/Best_RDF_model.pkl')
+def load_model():
+  model = tf.keras.models.load_model('models/weights.193-0.042.keras')
   return model
 
 # Function to cast numeric label back to wordish prediction
@@ -100,7 +100,7 @@ def print_main_menu():
 
 # LINK STARTTT
 if __name__ == "__main__":
-  model = load_model_pkl()
+  model = load_model()
   print_main_menu()
 
 # TEST DATA -> should predict "rice"
